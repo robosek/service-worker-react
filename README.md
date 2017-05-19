@@ -1,6 +1,6 @@
 ## Service workers in React application
 
-https://github.com/robosek/ServiceWokerReact
+https://robosek.github.io/ServiceWokerReact/
 
 ### Run this project:
 - Install packages: `npm install`.
