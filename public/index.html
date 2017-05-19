@@ -30,7 +30,7 @@
     <button id="imageButton" bsStyle="Primary">Get random image</button>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
+            navigator.serviceWorker.register('service-worker.js')
                 .then((registration) => {
                     console.log('Success. Registration scope: ' + registration.scope);
 
