@@ -9,7 +9,7 @@ self.addEventListener('sync', function (event) {
 function fetchRandomImage() {
     //https://unsplash.it/200/300/?random
     console.log('fetching random Image');
-    fetch('http://thecatapi.com/api/images/get?format=src&type=gif')
+    fetch('https://thecatapi.com/api/images/get?format=src&type=gif')
         .then((response) => {
             console.log(response);
             self.registration.showNotification('Hey! New cat image!',{body:response.url,icon:response.url,image:response.url});
