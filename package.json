@@ -2,14 +2,15 @@
   "name": "service-workers-react",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://robosek.github.io/ServiceWokerReact/",
   "dependencies": {
     "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4"
+
   },
   "devDependencies": {
     "react-scripts": "0.9.5",
-    "sw-precache":"5.1.1"
+    "sw-precache": "5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
