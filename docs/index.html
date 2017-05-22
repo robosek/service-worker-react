@@ -1,17 +1,26 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"><title>React App</title><link href="/static/css/main.9a0fe4f1.css" rel="stylesheet"></head><body><div id="root"></div><script>if ('serviceWorker' in navigator) {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="shortcut icon" href="/ServiceWokerReact/favicon.ico"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"><title>React App</title><link href="/ServiceWokerReact/static/css/main.9a0fe4f1.css" rel="stylesheet"></head><body><div id="root"></div><script>if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service-worker.js')
                 .then((registration) => {
                     console.log('Success. Registration scope: ' + registration.scope);
-
                     document.getElementById('imageButton').addEventListener('click',
                         () => {
                             registration.sync.register('myFirstSync').then(() => {
                                 console.log('Sync registration also successful');
                             });
-
                         });
-                          
+
                 }).catch((error) => {
                     console.log('Some error occurred: ' + error);
                 });
-        }</script><script type="text/javascript" src="/static/js/main.a5a8c8b1.js"></script></body></html>
+
+
+            new Promise(function (resolve, reject) {
+                Notification.requestPermission(function (result) {
+                    console.log('Notifications: ' + result);
+                    if (result !== 'granted') return reject(Error("Denied notification permission"));
+                    resolve();
+                })
+            }).then(function () {
+                console.log('Notificaiotn registered');
+            })
+        }</script><script type="text/javascript" src="/ServiceWokerReact/static/js/main.fe42d710.js"></script></body></html>

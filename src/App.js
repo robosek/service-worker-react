@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import cat from './cat.gif';
 import './App.css';
 import ImageButton from './components/ImageButton.react'
 import CustomImage from './components/CustomImage.react'
@@ -13,10 +14,10 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <br/>
-        <ImageButton uniqueId="imageButton" titleText="Get random cat gif"/>
+        <ImageButton uniqueId="imageButton" titleText="Get random cat image"/>
+        {/*<br/>
         <br/>
-        <br/>
-        <CustomImage uniqueId="customImage" imageUrl="http://thecatapi.com/api/images/get?format=src&type=gif" />
+        <CustomImage uniqueId="customImage" imageUrl={cat} />*/}
       </div>
     );
   }

@@ -1,5 +1,6 @@
 ﻿<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +17,7 @@
     -->
     <title>React App</title>
 </head>
+
 <body>
     <div id="root"></div>
     <!--
@@ -33,19 +35,29 @@
             navigator.serviceWorker.register('service-worker.js')
                 .then((registration) => {
                     console.log('Success. Registration scope: ' + registration.scope);
-
                     document.getElementById('imageButton').addEventListener('click',
                         () => {
                             registration.sync.register('myFirstSync').then(() => {
                                 console.log('Sync registration also successful');
                             });
-
                         });
-                          
+
                 }).catch((error) => {
                     console.log('Some error occurred: ' + error);
                 });
+
+
+            new Promise(function (resolve, reject) {
+                Notification.requestPermission(function (result) {
+                    console.log('Notifications: ' + result);
+                    if (result !== 'granted') return reject(Error("Denied notification permission"));
+                    resolve();
+                })
+            }).then(function () {
+                console.log('Notificaiotn registered');
+            })
         }
     </script>
 </body>
+
 </html>
