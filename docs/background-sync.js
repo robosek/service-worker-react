@@ -12,7 +12,7 @@ function fetchRandomImage() {
     fetch('https://thecatapi.com/api/images/get?format=src&type=gif')
         .then((response) => {
             console.log(response);
-            self.registration.showNotification('Hey! New cat image!',{body:response.url,image:response.url});
+            self.registration.showNotification('Hey! New image!',{body:response.url,image:response.url});
             return response;
         })
         .then((text) => {
