@@ -12,15 +12,14 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Offline test application</h2>
+          <h2>Offline test application</h2>  
         </div>
         <br/>
-        <ConnectionController/>
-        <br/>
-        <ImageButton uniqueId="imageButton" titleText="Get random image"/>
-        {/*<br/>
-        <br/>
-        <CustomImage uniqueId="customImage" imageUrl={cat} />*/}
+        <div className="container">
+          <ConnectionController />
+          <br />
+          <ImageButton uniqueId="imageButton" titleText="Get random image" />
+        </div>
       </div>
     );
   }
