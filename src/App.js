@@ -4,6 +4,7 @@ import cat from './cat.gif';
 import './App.css';
 import ImageButton from './components/ImageButton.react'
 import CustomImage from './components/CustomImage.react'
+import ConnectionController from './components/ConnectionController.react'
 
 class App extends Component {
   render() {
@@ -13,6 +14,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to offline-first test application</h2>
         </div>
+        <br/>
+        <ConnectionController/>
         <br/>
         <ImageButton uniqueId="imageButton" titleText="Get random cat image"/>
         {/*<br/>
